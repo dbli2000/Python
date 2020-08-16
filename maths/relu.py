@@ -1,16 +1,17 @@
 """
 This script demonstrates the implementation of the ReLU function.
 
-It's a kind of activation function defined as the positive part of its argument in the context of neural network.
+It's a kind of activation function defined as the positive part of its argument in the
+context of neural network.
 The function takes a vector of K real numbers as input and then argmax(x, 0).
 After through ReLU, the element of the vector always 0 or real number.
 
 Script inspired from its corresponding Wikipedia article
 https://en.wikipedia.org/wiki/Rectifier_(neural_networks)
 """
+from typing import List
 
 import numpy as np
-from typing import List
 
 
 def relu(vector: List[float]):

@@ -6,8 +6,8 @@ Created on Mon Feb 26 15:40:07 2018
 
 This file contains the test-suite for the linear algebra library.
 """
-
 import unittest
+
 from lib import Matrix, Vector, axpy, squareZeroMatrix, unitBasisVector, zeroVector
 
 
@@ -19,7 +19,7 @@ class Test(unittest.TestCase):
         x = Vector([1, 2, 3])
         self.assertEqual(x.component(0), 1)
         self.assertEqual(x.component(2), 3)
-        y = Vector()
+        _ = Vector()
 
     def test_str(self):
         """

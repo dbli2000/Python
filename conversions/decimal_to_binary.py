@@ -1,10 +1,10 @@
 """Convert a Decimal Number to a Binary Number."""
 
 
-def decimal_to_binary(num):
+def decimal_to_binary(num: int) -> str:
 
     """
-        Convert a Integer Decimal Number to a Binary Number as str.
+        Convert an Integer Decimal Number to a Binary Number as str.
         >>> decimal_to_binary(0)
         '0b0'
         >>> decimal_to_binary(2)

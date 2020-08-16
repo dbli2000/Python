@@ -41,11 +41,9 @@
 
     Author: @EverLookNeverSee
 """
-
 from math import log
 from os import name, system
-from random import gauss
-from random import seed
+from random import gauss, seed
 
 
 # Make a training dataset drawn from a gaussian distribution
@@ -186,7 +184,8 @@ def predict_y_values(
     >>> means = [5.011267842911003, 10.011267842911003, 15.011267842911002]
     >>> variance = 0.9618530973487494
     >>> probabilities = [0.3333333333333333, 0.3333333333333333, 0.3333333333333333]
-    >>> predict_y_values(x_items, means, variance, probabilities) # doctest: +NORMALIZE_WHITESPACE
+    >>> predict_y_values(x_items, means, variance,
+    ...                  probabilities)  # doctest: +NORMALIZE_WHITESPACE
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
     2, 2, 2, 2, 2, 2, 2, 2, 2]
@@ -211,7 +210,7 @@ def predict_y_values(
             # appending discriminant values of each item to 'results' list
             results.append(temp)
 
-    return [l.index(max(l)) for l in results]
+    return [result.index(max(result)) for result in results]
 
 
 # Calculating Accuracy
